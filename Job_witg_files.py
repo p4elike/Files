@@ -26,22 +26,11 @@ with open('допустим.txt') as recipe_list:
     #pprint(result)
 
 def get_shop_list_by_dishes(dishes_list, person_count):
-    list_by_dishes = []
     for dishes in result and dishes_list:
-        list_by_dishes.append(result[dishes])
-        print(list_by_dishes)
-
-            # for ingredient_list in list_by_dishes:
-            #     for ingredient_quantity in ingredient_list:
-            #         ingredient_quantity['quantity'] = ingredient_quantity['quantity'] * person_count
-            #         get_shop_list_by_dishes = {ingredient_quantity['ingredient_name'] : {ingredient_quantity['quantity'],ingredient_quantity['measure']}}
-            #         #print(ingredient_quantity['ingredient_name'], ingredient_quantity['quantity'], ingredient_quantity['measure'],)
-            #
-            #
-            #
-            #         print(get_shop_list_by_dishes)
-
-
+        list_dishes = result[dishes]
+        for ingredient in list_dishes:
+            list_dishes_1 = {ingredient['ingredient_name'] : [ingredient['quantity']*person_count, ingredient['measure']]}
+            print(list_dishes_1)
 
 get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
 #get_shop_list_by_dishes( 'Омлет', 3 )
