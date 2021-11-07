@@ -32,5 +32,5 @@ def get_shop_list_by_dishes(dishes_list, person_count):
             list_dishes_1 = {ingredient['ingredient_name'] : [ingredient['quantity']*person_count, ingredient['measure']]}
             print(list_dishes_1)
 
-get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
+get_shop_list_by_dishes(['Запеченный картофель', 'Омлет', 'Омлет'], 2)
 #get_shop_list_by_dishes( 'Омлет', 3 )
